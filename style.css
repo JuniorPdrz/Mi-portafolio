@@ -132,3 +132,126 @@ a:hover {
     padding: 25px;
   }
 }
+/* NAVEGACIÓN */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #0f0f1a;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid #2a2a4e;
+}
+
+nav .logo {
+  color: #4a90d9;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #4a90d9;
+}
+
+/* RESPONSIVE - menú en celular */
+@media (max-width: 600px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+}
+/* ANIMACIONES */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* BOTÓN MODO */
+#modo-btn {
+  background: none;
+  border: 1px solid #4a90d9;
+  color: #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+#modo-btn:hover {
+  background-color: #4a90d9;
+}
+
+/* MODO CLARO */
+body.claro {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.claro header {
+  background: linear-gradient(135deg, #dce8f5, #c5d9f0);
+  color: #1a1a2e;
+}
+
+body.claro header p {
+  color: #555;
+}
+
+body.claro nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+body.claro nav ul li a {
+  color: #333;
+}
+
+body.claro section {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+body.claro section h2 {
+  color: #1a1a2e;
+}
+
+body.claro section p {
+  color: #555;
+}
+
+body.claro .proyecto {
+  border-color: #ddd;
+}
+
+body.claro .proyecto h3 {
+  color: #1a1a2e;
+}
